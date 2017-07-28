@@ -1,16 +1,14 @@
 # variable-selection-for-random-effects-two-part-model
 
-    We provide some SAS and Matlab code when the sample size n is 100 in this folder.
+We provide some SAS and Matlab code when the sample size n is 100 in this folder. Please change the current paths before you run the program.  
+
+In the folder "SAS code", we provide the code for the full model method, the oracle method, the MIC method and the MIC method for bootstrap samples (bootstrap). For the full model method, the oracle method, and the MIC method, we only provide the code based on one replication (the data in the file "two_part21.xls"). For the MIC method for bootstrap samples, we provide the code based on 100 bootstrap samples. These bootstrap samples are generated using the data in the file "two_part21.xls". 
   
-  In the folder "SAS code", we provide the code for the full model method, the oracle method, the MIC method and the MIC method for bootstrap samples (bootstrap). For the full model method and the oracle method, we only provide the code based on one replication (the data in the file "two_part21.xls"). For the MIC method, we only provide the code based on one replication (the data in the file "two_part21.xls"). For the MIC method for bootstrap samples, we provide the code based on 100 bootstrap samples. These bootstrap samples are generated using the data in the file "two_part21.xls". 
+Since the calculation by using bootstrap method takes too long, we conduct our simulation on the server.
 
- Please change the current paths before you run the program.
-  
-Since the calculation by using bootstrap method will cost too much time, we conduct our simulation on the server.
+In the subdirectory \code\matlab code\generate data, we provide the code used to generate the data. You only need to run the program "maincsv.m", then the data and bootstrap samples will be generated in the subdirectory\code\matlab code\generate data. "data1.m" is a function called by "maincsv.m". Here we only provide the code that can generate one dataset and 100 bootstrap samples using this dataset.
 
-  In the subdirectory \code\matlab code\generate data, we provide the code used to generate the data. You only need to run the program "maincsv.m", then the data and bootstrap samples will be generated in the subdirectory\code\matlab code\generate data. "data1.m" is a function called by "maincsv.m". Here we only provide the code that can generate one dataset and 100 bootstrap samples using this dataset.
-
- In addition, we provide the sas code that can be used to obtain the estimation of parameters using the oracle method. You only need to run the program "oracle.sas" in the subdirectory \code\sas code\oracle, then the estimation of parameters are saved in a file named "estoracleall.csv" in the subdirectory \code\sas code\oracle\Results_save1.
+In addition, we provide the sas code that can be used to obtain the estimation of parameters using the oracle method. You only need to run the program "oracle.sas" in the subdirectory \code\sas code\oracle, then the estimation of parameters are saved in a file named "estoracleall.csv" in the subdirectory \code\sas code\oracle\Results_save1.
 
 Similarly, we provide sas code used to obtain the estimation of parameters for the full model method. The operation is under the subdirectory \code\sas code\full.
 
